@@ -1,1 +1,1 @@
-{"name":"HC","short_name":"HC","theme_color":"#49b1f5","background_color":"#49b1f5","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"images/H_512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}
+{"name":"HC","short_name":"HC","theme_color":"#49b1f5","background_color":"#49b1f5","display":"standalone","scope":"/","start_url":"/","icons":[{"src":"img/H_512.png","sizes":"512x512","type":"image/png"}],"splash_pages":null}
