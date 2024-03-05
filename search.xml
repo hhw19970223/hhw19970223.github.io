@@ -1,27 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2017/04/20/hello-world/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>PWA</title>
+    <url>/2024/03/04/PWA/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="PWA-测试-demo"><a href="#PWA-测试-demo" class="headerlink" title="PWA 测试 demo"></a>PWA <a href="https://github.com/hhw19970223/pwa">测试 demo</a></h2><div class="note info no-icon flat"><p>渐进式 Web 应用程序（Progressive Web App，PWA）是一种结合了传统 Web 应用程序和移动应用程序优势的新型 Web 应用程序开发模式。PWA 的主要目标是提供类似于原生应用的用户体验，包括快速加载、离线访问、推送通知等功能，同时具有 Web 应用程序的可访问性和易于分享的优势。</p>
+</div>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="web-app-安装"><a href="#web-app-安装" class="headerlink" title="web app 安装"></a>web app 安装</h3><ul>
+<li>首先需要在网站下建立 manifest.json 文件，并在页面中引入：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;manifest&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./manifest.json&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li>manifest.json 配置</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name:  用户看到的应用名称</span><br><span class="line">short_name: 应用短名称。当显示应用名称的地方不够时，将使用该名称。</span><br><span class="line">description: 应用描述。</span><br><span class="line">start_url: 应用起始路径，相对路径，默认为/。</span><br><span class="line">scope: URL范围。比如：如果您将“/app/”设置为URL范围时，这个应用就会一直在这个目录中。</span><br><span class="line">background_color: 欢迎页面的背景颜色和浏览器的背景颜色（可选）</span><br><span class="line">theme_color: 应用的主题颜色，一般都会和背景颜色一样。这个设置决定了应用如何显示。</span><br><span class="line">orientation: 优先旋转方向</span><br><span class="line">  - any 任意方向切换</span><br><span class="line">  - natural 根据不同平台的规则，显示为当前平台的0°方向</span><br><span class="line">  - landscape 根据屏幕的方向，自动横屏幕180°切换</span><br><span class="line">  - landscape-primary 当视窗宽度大于高度时，当前应用处于“横屏”状态</span><br><span class="line">  - landscape-secondary landscape-primary的180°方向</span><br><span class="line">  - portrait 根据屏幕方向，自动竖屏180°切换</span><br><span class="line">  - portrait-primary 当视窗宽度小于高度时，当前应用处于“竖屏”状态</span><br><span class="line">  - portrait-secondary portrait-primary的180°方向</span><br><span class="line">display: 显示方式</span><br><span class="line">  - fullscreen 应用的显示界面将占满整个屏幕</span><br><span class="line">  - standalone 浏览器相关UI（如导航栏、工具栏等）将会被隐藏</span><br><span class="line">  - minimal-ui 最显示形式与standalone类似，浏览器相关UI会最小化为一个按钮，不同浏览器在实现上略有不同</span><br><span class="line">  - browser 浏览器模式，与普通网页在浏览器中打开的显示一致</span><br><span class="line">icons: 一个包含所有图片的数组。该数组中每个元素包含了图片的URL，大小和类型 (至少需要一个512x512)。</span><br><span class="line">dir: 设置文字的显示方向</span><br><span class="line">  - ltr 文本显示方向，左到右</span><br><span class="line">  - rtl 文本显示方向，右到左</span><br><span class="line">  - auto 根据系统的方向显示</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<ul>
+<li>自定义添加到主屏幕</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//未安装web app才会触发beforeinstallprompt事件</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListen</span>(<span class="string">&quot;beforeinstallprompt&quot;</span>, <span class="function">(<span class="params">e: <span class="built_in">any</span></span>) =&gt;</span> &#123;</span><br><span class="line">  e.<span class="title function_">prompt</span>(); <span class="comment">//主动安装web app操作</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+<ul>
+<li>监听 webApp 安装成功</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;appinstalled&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检测 standalone 显示模式是否启用</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">matchMedia</span>(<span class="string">&quot;(display-mode: standalone)&quot;</span>).<span class="property">matches</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>css 样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.app-button</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">display-mode</span>: standalone) &#123;</span><br><span class="line">  <span class="selector-class">.app-button</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h3><div class="note info no-icon flat"><p>Service Worker 是一种在浏览器背后运行的脚本，它能够拦截和处理网络请求，提供了一种在离线状态下缓存资源并实现离线访问的能力。</p>
+</div>
+
+<ul>
+<li>注册</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//注册serviceWorker  sw.js为根目录下的serviceWorker相关代码</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">&quot;serviceWorker&quot;</span> <span class="keyword">in</span> navigator &amp;&amp; navigator.<span class="property">serviceWorker</span>) &#123;</span><br><span class="line">  navigator.<span class="property">serviceWorker</span></span><br><span class="line">    .<span class="title function_">register</span>(<span class="string">&quot;./sw.js&quot;</span>)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">registration</span>) &#123;</span><br><span class="line">      <span class="comment">//do something</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;Error during service worker registration:&quot;</span>, e);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生命周期</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//在用户第一次访问页面时触发安装事件, 在这个阶段中，service workers被安装在浏览器中。在安装过程中</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;install&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;&#125;);</span><br><span class="line"><span class="comment">//当service worker启动时，此事件将被触发</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;activate&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;&#125;);</span><br><span class="line"><span class="comment">//作用与于从服务器端的数据缓存到 app壳中</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;fetch&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>消息发送</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//向serviceWorker发送消息</span></span><br><span class="line">navigator.<span class="property">serviceWorker</span>?.<span class="property">controller</span>?.<span class="property">postMessage</span>?.(<span class="string">&quot;消息&quot;</span>);</span><br><span class="line"><span class="comment">//监听serviceWorker发送过来消息</span></span><br><span class="line">navigator.<span class="property">serviceWorker</span>?.<span class="property">addEventListener</span>?.(<span class="string">&quot;message&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//sw.js</span></span><br><span class="line"><span class="comment">//监听页面发送过来的消息</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;message&quot;</span>, <span class="keyword">async</span> (e) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> client = <span class="keyword">await</span> self.<span class="property">clients</span>.<span class="title function_">get</span>(e.<span class="property">source</span>.<span class="property">id</span>);</span><br><span class="line">  client.<span class="title function_">postMessage</span>(<span class="string">&quot;发给页面层的消息&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//自发情况下，只能对所有 client 进行广播通讯</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">sendClientMessage</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> allClients = <span class="keyword">await</span> clients.<span class="title function_">matchAll</span>(&#123;</span><br><span class="line">    <span class="attr">includeUncontrolled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;all&quot;</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">  allClients.<span class="title function_">forEach</span>(<span class="function">(<span class="params">client</span>) =&gt;</span> &#123;</span><br><span class="line">    client.<span class="title function_">postMessage</span>(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将静态资源缓存起来</li>
+</ul>
+<div style="display: flex; text-align: center; gap: 50px; margin-bottom: 25px;">
+  <div style="display: flex; flex-direction: column; justify-content: space-between">
+    <img src="/img/pwa/2.1.png" alt="图2.1" />
+    <div>图2.1</div>
+  </div>
+  <div style="display: flex; flex-direction: column; justify-content: space-between">
+    <img src="/img/pwa/2.2.png" alt="图2.2" />
+    <div>图2.2</div>
+  </div> 
+</div>
+
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//版本不一致时清除缓存, 见图2.1(代码片段)</span></span><br><span class="line"><span class="keyword">const</span> names = <span class="keyword">await</span> caches.<span class="title function_">keys</span>();</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>(</span><br><span class="line">  names.<span class="title function_">map</span>(<span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (name !== <span class="variable constant_">CACHE_NAME</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> caches.<span class="title function_">delete</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"><span class="comment">//发现缓存中存在资源时直接读取缓存, 见图2.2(代码片段)</span></span><br><span class="line"><span class="keyword">const</span> cache = <span class="keyword">await</span> caches.<span class="title function_">open</span>(<span class="variable constant_">CACHE_NAME</span>);</span><br><span class="line"><span class="keyword">const</span> versionedUrl = <span class="string">`<span class="subst">$&#123;event.request.url&#125;</span>?v=<span class="subst">$&#123;VERSION&#125;</span>`</span>;</span><br><span class="line"><span class="keyword">const</span> cachedResponse = <span class="keyword">await</span> cache.<span class="title function_">match</span>(versionedUrl);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (cachedResponse) &#123;</span><br><span class="line">  <span class="keyword">return</span> cachedResponse;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> fetchResponse = <span class="keyword">await</span> <span class="title function_">fetch</span>(versionedUrl);</span><br><span class="line">  cache.<span class="title function_">put</span>(versionedUrl, fetchResponse.<span class="title function_">clone</span>());</span><br><span class="line">  <span class="keyword">return</span> fetchResponse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="用户的桌面通知"><a href="#用户的桌面通知" class="headerlink" title="用户的桌面通知"></a>用户的桌面通知</h3><div class="note info no-icon flat"><p>W3C 推出了 Notifications API 用于配置和显示用户的桌面通知。</p>
+</div>
+
+<ul>
+<li>桌面通知权限<div style="display: flex; text-align: center; margin-bottom: 25px;">
+<div>
+  <img src="/img/pwa/3.1.png" alt="图3.1" />
+  <div>图3.1</div>
+</div>
+</div></li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//见图3.1</span></span><br><span class="line"><span class="keyword">const</span> promise = <span class="keyword">await</span> <span class="title class_">Notification</span>.<span class="title function_">requestPermission</span>();<span class="comment">//granted: 已授权权限  denied: 已拒绝权限 default 未授权权限</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建通知</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> myNotification = <span class="keyword">new</span> <span class="title class_">Notification</span>(title, options);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">title： 定义通知的标题。</span><br><span class="line">options：</span><br><span class="line">  - actions：NotificationActions 数组，表示在显示通知时用户可用的操作。 这些是用户可以选择的选项，以便在通知本身的上下文中对该动作起作用。 操作的名称将发送到服务工作者通知处理程序，以使其知道用户已选择的操作。数组的成员应该是对象文字。它可能包含以下值：（注意：此属性只在 serviceWorker 环境下有效。click 时可以通过 event.action 来获取）</span><br><span class="line">    - action：DOMString，显示在通知上的 action 标志。</span><br><span class="line">    - title：DOMString，显示在通知上的 action 标题。</span><br><span class="line">    - icon：USVString，显示在 action 上的 icon URL。</span><br><span class="line">  - badge：包含图像 URL 的U SVString，用于在没有足够空间显示通知本身时表示通知，例如 Android Notification Bar。 在 Android 设备上，徽章应能容纳高达4倍分辨率的设备，大约 96 x 96 像素，并且图像将自动屏蔽。</span><br><span class="line">  - body：表示要在通知中显示的额外内容的字符串。</span><br><span class="line">  - data：希望与通知关联的任意数据。这可以是任何数据类型，通event.currentTarget.data 来获取。</span><br><span class="line">  - dir：显示通知的方向。 它默认为 auto，它只采用浏览器的语言设置行为，但你可以通过设置 ltr 和 rtl 的值来覆盖该行为（尽管大多数浏览器似乎忽略这些设置。）</span><br><span class="line">  - icon：USVString，包含要在通知中显示的图标的URL。</span><br><span class="line">  - lang：指定通知中使用的 lang。此字符串必须是有效的 BCP 47 语言标记。</span><br><span class="line">  - renotify：Boolean，指定在新通知替换旧通知后是否应通知用户。 默认值为false，表示不会通知他们。</span><br><span class="line">  - requirInteraction：表示通知应保持活动状态，直到用户单击或关闭它，而不是自动关闭。 默认值为 false。必须带 tag 才有效果。</span><br><span class="line">  - silent：无论设备设置如何，都应该发出一个布尔值，指定通知是否应该是静音，即不应发出声音或振动。 默认值为 false，这意味着它不会是静默的。</span><br><span class="line">  - tag：给定通知的 ID，允许您在必要时使用脚本查找，替换或删除通知。</span><br><span class="line">  - timestamp：DOMTimeStamp 表示创建通知的时间。 它可用于指示通知实际的时间。 例如，这可能是在过去，当通知用于因设备离线而无法立即传递的消息时，或将来用于即将开始的会议时间。</span><br><span class="line">  - vibrate：与通知显示一起运行的振动模式。 振动模式可以是具有少至一个成员的阵列。 值是以毫秒为单位的时间，其中偶数索引（0,2,4等）表示振动多长时间，奇数索引表示暂停多长时间。 例如，[300,100,400] 将振动 300ms，暂停 100ms，然后振动 400ms。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>普通通知</li>
+</ul>
+<div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <div>
+    <img src="/img/pwa/3.2.png" alt="图3.2" />
+    <div>图3.2</div>
+  </div>
+</div>
+
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//见图3.2</span></span><br><span class="line"><span class="title class_">Notification</span>.<span class="title function_">requestPermission</span>().<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> n = <span class="keyword">new</span> <span class="title class_">Notification</span>(<span class="string">&#x27;消息提醒&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;这是一条普通消息&#x27;</span>,</span><br><span class="line">    <span class="attr">icon</span>: <span class="string">&#x27;/images/favicon.png&#x27;</span>,</span><br><span class="line">    <span class="attr">requireInteraction</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">data</span>: <span class="string">&#x27;https://baidu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">timestamp</span>: <span class="title class_">Date</span>.<span class="title function_">now</span>(),</span><br><span class="line">    <span class="comment">// vibrate: [300,100,400],//振动 300ms，暂停 100ms，然后振动 400ms</span></span><br><span class="line">  &#125;);</span><br><span class="line">      </span><br><span class="line">  n.<span class="property">onclick</span> = <span class="function"><span class="params">event</span> =&gt;</span> &#123;</span><br><span class="line">    n.<span class="title function_">close</span>();</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">const</span> currentTarget = event.<span class="property">currentTarget</span> <span class="keyword">as</span> <span class="built_in">any</span>;</span><br><span class="line">    <span class="keyword">if</span>(currentTarget.<span class="property">data</span>) &#123;</span><br><span class="line">      <span class="variable language_">window</span>.<span class="title function_">open</span>(currentTarget.<span class="property">data</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;通知权限已禁止，请设置打开权限&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>交互通知</li>
+</ul>
+<div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <div>
+    <img src="/img/pwa/3.3.png" alt="图3.3" />
+    <div>图3.3</div>
+  </div>
+</div>
+
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//见图3.3</span></span><br><span class="line">navigator.<span class="property">serviceWorker</span>.<span class="property">ready</span>.<span class="title function_">then</span>(<span class="function"><span class="params">swReg</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="title class_">Notification</span>.<span class="title function_">requestPermission</span>().<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    swReg.<span class="title function_">showNotification</span>(<span class="string">&#x27;你好&#x27;</span>, &#123;</span><br><span class="line">      <span class="attr">body</span>: <span class="string">&#x27;你想要钱吗?&#x27;</span>,</span><br><span class="line">      <span class="attr">icon</span>: <span class="string">&#x27;/images/favicon.png&#x27;</span>,</span><br><span class="line">      <span class="attr">requireInteraction</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">actions</span>: [&#123;</span><br><span class="line">        <span class="attr">action</span>: <span class="string">&#x27;yes&#x27;</span>,</span><br><span class="line">        <span class="attr">title</span>: <span class="string">&#x27;想&#x27;</span>,</span><br><span class="line">      &#125;, &#123;</span><br><span class="line">        <span class="attr">action</span>: <span class="string">&#x27;no&#x27;</span>,</span><br><span class="line">        <span class="attr">title</span>: <span class="string">&#x27;不想&#x27;</span></span><br><span class="line">      &#125;]</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;).<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;通知权限已禁止，请设置打开权限&#x27;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)  </span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//sw.js 监听notification</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;notificationclick&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;notificationclick&quot;</span>, event);</span><br><span class="line">  event.<span class="property">notification</span>.<span class="title function_">close</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (event.<span class="property">action</span> == <span class="string">&quot;yes&quot;</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yes&quot;</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (event.<span class="property">action</span> == <span class="string">&quot;no&quot;</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;no&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Html</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>Html</tag>
+        <tag>webApp</tag>
+        <tag>PWA</tag>
       </tags>
   </entry>
 </search>

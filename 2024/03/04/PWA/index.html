@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>PWA | HC</title><meta name="author" content="HC"><meta name="copyright" content="HC"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="渐进式 Web 应用程序（Progressive Web App，PWA）是一种结合了传统 Web 应用程序和移动应用程序优势的新型 Web 应用程序开发模式。PWA 的主要目标是提供类似于原生应用的用户体验，包括快速加载、离线访问、推送通知等功能，同时具有 Web 应用程序的可访问性和易于分享的优势。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PWA">
+<meta property="og:url" content="https://hhw19970223.github.io/2024/03/04/PWA/index.html">
+<meta property="og:site_name" content="HC">
+<meta property="og:description" content="渐进式 Web 应用程序（Progressive Web App，PWA）是一种结合了传统 Web 应用程序和移动应用程序优势的新型 Web 应用程序开发模式。PWA 的主要目标是提供类似于原生应用的用户体验，包括快速加载、离线访问、推送通知等功能，同时具有 Web 应用程序的可访问性和易于分享的优势。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hhw19970223.github.io/img/H_512.png">
+<meta property="article:published_time" content="2024-03-04T10:23:07.000Z">
+<meta property="article:modified_time" content="2024-03-05T03:59:05.642Z">
+<meta property="article:author" content="HC">
+<meta property="article:tag" content="webApp">
+<meta property="article:tag" content="PWA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hhw19970223.github.io/img/H_512.png"><link rel="shortcut icon" href="/img/H_512.ico"><link rel="canonical" href="https://hhw19970223.github.io/2024/03/04/PWA/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'PWA',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-05 11:59:05'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/H_512.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/banner.png')"><nav id="nav"><span id="blog-info"><a href="/" title="HC"></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">PWA</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-04T10:23:07.000Z" title="发表于 2024-03-04 18:23:07">2024-03-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-05T03:59:05.642Z" title="更新于 2024-03-05 11:59:05">2024-03-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="PWA"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="PWA-测试-demo"><a href="#PWA-测试-demo" class="headerlink" title="PWA 测试 demo"></a>PWA <a target="_blank" rel="noopener" href="https://github.com/hhw19970223/pwa">测试 demo</a></h2><div class="note info no-icon flat"><p>渐进式 Web 应用程序（Progressive Web App，PWA）是一种结合了传统 Web 应用程序和移动应用程序优势的新型 Web 应用程序开发模式。PWA 的主要目标是提供类似于原生应用的用户体验，包括快速加载、离线访问、推送通知等功能，同时具有 Web 应用程序的可访问性和易于分享的优势。</p>
+</div>
+
+<h3 id="web-app-安装"><a href="#web-app-安装" class="headerlink" title="web app 安装"></a>web app 安装</h3><ul>
+<li>首先需要在网站下建立 manifest.json 文件，并在页面中引入：</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;manifest&quot;</span> <span class="attr">href</span>=<span class="string">&quot;./manifest.json&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>manifest.json 配置</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">name:  用户看到的应用名称</span><br><span class="line">short_name: 应用短名称。当显示应用名称的地方不够时，将使用该名称。</span><br><span class="line">description: 应用描述。</span><br><span class="line">start_url: 应用起始路径，相对路径，默认为/。</span><br><span class="line">scope: URL范围。比如：如果您将“/app/”设置为URL范围时，这个应用就会一直在这个目录中。</span><br><span class="line">background_color: 欢迎页面的背景颜色和浏览器的背景颜色（可选）</span><br><span class="line">theme_color: 应用的主题颜色，一般都会和背景颜色一样。这个设置决定了应用如何显示。</span><br><span class="line">orientation: 优先旋转方向</span><br><span class="line">  - any 任意方向切换</span><br><span class="line">  - natural 根据不同平台的规则，显示为当前平台的0°方向</span><br><span class="line">  - landscape 根据屏幕的方向，自动横屏幕180°切换</span><br><span class="line">  - landscape-primary 当视窗宽度大于高度时，当前应用处于“横屏”状态</span><br><span class="line">  - landscape-secondary landscape-primary的180°方向</span><br><span class="line">  - portrait 根据屏幕方向，自动竖屏180°切换</span><br><span class="line">  - portrait-primary 当视窗宽度小于高度时，当前应用处于“竖屏”状态</span><br><span class="line">  - portrait-secondary portrait-primary的180°方向</span><br><span class="line">display: 显示方式</span><br><span class="line">  - fullscreen 应用的显示界面将占满整个屏幕</span><br><span class="line">  - standalone 浏览器相关UI（如导航栏、工具栏等）将会被隐藏</span><br><span class="line">  - minimal-ui 最显示形式与standalone类似，浏览器相关UI会最小化为一个按钮，不同浏览器在实现上略有不同</span><br><span class="line">  - browser 浏览器模式，与普通网页在浏览器中打开的显示一致</span><br><span class="line">icons: 一个包含所有图片的数组。该数组中每个元素包含了图片的URL，大小和类型 (至少需要一个512x512)。</span><br><span class="line">dir: 设置文字的显示方向</span><br><span class="line">  - ltr 文本显示方向，左到右</span><br><span class="line">  - rtl 文本显示方向，右到左</span><br><span class="line">  - auto 根据系统的方向显示</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>自定义添加到主屏幕</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//未安装web app才会触发beforeinstallprompt事件</span></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListen</span>(<span class="string">&quot;beforeinstallprompt&quot;</span>, <span class="function">(<span class="params">e: <span class="built_in">any</span></span>) =&gt;</span> &#123;</span><br><span class="line">  e.<span class="title function_">prompt</span>(); <span class="comment">//主动安装web app操作</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>监听 webApp 安装成功</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;appinstalled&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检测 standalone 显示模式是否启用</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">matchMedia</span>(<span class="string">&quot;(display-mode: standalone)&quot;</span>).<span class="property">matches</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>css 样式</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.app-button</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">display-mode</span>: standalone) &#123;</span><br><span class="line">  <span class="selector-class">.app-button</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Service-Worker"><a href="#Service-Worker" class="headerlink" title="Service Worker"></a>Service Worker</h3><div class="note info no-icon flat"><p>Service Worker 是一种在浏览器背后运行的脚本，它能够拦截和处理网络请求，提供了一种在离线状态下缓存资源并实现离线访问的能力。</p>
+</div>
+
+<ul>
+<li>注册</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册serviceWorker  sw.js为根目录下的serviceWorker相关代码</span></span><br><span class="line"><span class="keyword">if</span> (<span class="string">&quot;serviceWorker&quot;</span> <span class="keyword">in</span> navigator &amp;&amp; navigator.<span class="property">serviceWorker</span>) &#123;</span><br><span class="line">  navigator.<span class="property">serviceWorker</span></span><br><span class="line">    .<span class="title function_">register</span>(<span class="string">&quot;./sw.js&quot;</span>)</span><br><span class="line">    .<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">registration</span>) &#123;</span><br><span class="line">      <span class="comment">//do something</span></span><br><span class="line">    &#125;)</span><br><span class="line">    .<span class="title function_">catch</span>(<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&quot;Error during service worker registration:&quot;</span>, e);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生命周期</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在用户第一次访问页面时触发安装事件, 在这个阶段中，service workers被安装在浏览器中。在安装过程中</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;install&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;&#125;);</span><br><span class="line"><span class="comment">//当service worker启动时，此事件将被触发</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;activate&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;&#125;);</span><br><span class="line"><span class="comment">//作用与于从服务器端的数据缓存到 app壳中</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;fetch&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>消息发送</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//向serviceWorker发送消息</span></span><br><span class="line">navigator.<span class="property">serviceWorker</span>?.<span class="property">controller</span>?.<span class="property">postMessage</span>?.(<span class="string">&quot;消息&quot;</span>);</span><br><span class="line"><span class="comment">//监听serviceWorker发送过来消息</span></span><br><span class="line">navigator.<span class="property">serviceWorker</span>?.<span class="property">addEventListener</span>?.(<span class="string">&quot;message&quot;</span>, <span class="function">(<span class="params">event</span>) =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//sw.js</span></span><br><span class="line"><span class="comment">//监听页面发送过来的消息</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;message&quot;</span>, <span class="keyword">async</span> (e) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> client = <span class="keyword">await</span> self.<span class="property">clients</span>.<span class="title function_">get</span>(e.<span class="property">source</span>.<span class="property">id</span>);</span><br><span class="line">  client.<span class="title function_">postMessage</span>(<span class="string">&quot;发给页面层的消息&quot;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//自发情况下，只能对所有 client 进行广播通讯</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">sendClientMessage</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> allClients = <span class="keyword">await</span> clients.<span class="title function_">matchAll</span>(&#123;</span><br><span class="line">    <span class="attr">includeUncontrolled</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">type</span>: <span class="string">&quot;all&quot;</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">  allClients.<span class="title function_">forEach</span>(<span class="function">(<span class="params">client</span>) =&gt;</span> &#123;</span><br><span class="line">    client.<span class="title function_">postMessage</span>(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>将静态资源缓存起来</li>
+</ul>
+<div style="display: flex; text-align: center; gap: 50px; margin-bottom: 25px;">
+  <div style="display: flex; flex-direction: column; justify-content: space-between">
+    <img src="/img/pwa/2.1.png" alt="图2.1" />
+    <div>图2.1</div>
+  </div>
+  <div style="display: flex; flex-direction: column; justify-content: space-between">
+    <img src="/img/pwa/2.2.png" alt="图2.2" />
+    <div>图2.2</div>
+  </div> 
+</div>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//版本不一致时清除缓存, 见图2.1(代码片段)</span></span><br><span class="line"><span class="keyword">const</span> names = <span class="keyword">await</span> caches.<span class="title function_">keys</span>();</span><br><span class="line"><span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>(</span><br><span class="line">  names.<span class="title function_">map</span>(<span class="function">(<span class="params">name</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (name !== <span class="variable constant_">CACHE_NAME</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> caches.<span class="title function_">delete</span>(name);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"><span class="comment">//发现缓存中存在资源时直接读取缓存, 见图2.2(代码片段)</span></span><br><span class="line"><span class="keyword">const</span> cache = <span class="keyword">await</span> caches.<span class="title function_">open</span>(<span class="variable constant_">CACHE_NAME</span>);</span><br><span class="line"><span class="keyword">const</span> versionedUrl = <span class="string">`<span class="subst">$&#123;event.request.url&#125;</span>?v=<span class="subst">$&#123;VERSION&#125;</span>`</span>;</span><br><span class="line"><span class="keyword">const</span> cachedResponse = <span class="keyword">await</span> cache.<span class="title function_">match</span>(versionedUrl);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (cachedResponse) &#123;</span><br><span class="line">  <span class="keyword">return</span> cachedResponse;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> fetchResponse = <span class="keyword">await</span> <span class="title function_">fetch</span>(versionedUrl);</span><br><span class="line">  cache.<span class="title function_">put</span>(versionedUrl, fetchResponse.<span class="title function_">clone</span>());</span><br><span class="line">  <span class="keyword">return</span> fetchResponse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="用户的桌面通知"><a href="#用户的桌面通知" class="headerlink" title="用户的桌面通知"></a>用户的桌面通知</h3><div class="note info no-icon flat"><p>W3C 推出了 Notifications API 用于配置和显示用户的桌面通知。</p>
+</div>
+
+<ul>
+<li>桌面通知权限<div style="display: flex; text-align: center; margin-bottom: 25px;">
+<div>
+  <img src="/img/pwa/3.1.png" alt="图3.1" />
+  <div>图3.1</div>
+</div>
+</div></li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//见图3.1</span></span><br><span class="line"><span class="keyword">const</span> promise = <span class="keyword">await</span> <span class="title class_">Notification</span>.<span class="title function_">requestPermission</span>();<span class="comment">//granted: 已授权权限  denied: 已拒绝权限 default 未授权权限</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建通知</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myNotification = <span class="keyword">new</span> <span class="title class_">Notification</span>(title, options);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">title： 定义通知的标题。</span><br><span class="line">options：</span><br><span class="line">  - actions：NotificationActions 数组，表示在显示通知时用户可用的操作。 这些是用户可以选择的选项，以便在通知本身的上下文中对该动作起作用。 操作的名称将发送到服务工作者通知处理程序，以使其知道用户已选择的操作。数组的成员应该是对象文字。它可能包含以下值：（注意：此属性只在 serviceWorker 环境下有效。click 时可以通过 event.action 来获取）</span><br><span class="line">    - action：DOMString，显示在通知上的 action 标志。</span><br><span class="line">    - title：DOMString，显示在通知上的 action 标题。</span><br><span class="line">    - icon：USVString，显示在 action 上的 icon URL。</span><br><span class="line">  - badge：包含图像 URL 的U SVString，用于在没有足够空间显示通知本身时表示通知，例如 Android Notification Bar。 在 Android 设备上，徽章应能容纳高达4倍分辨率的设备，大约 96 x 96 像素，并且图像将自动屏蔽。</span><br><span class="line">  - body：表示要在通知中显示的额外内容的字符串。</span><br><span class="line">  - data：希望与通知关联的任意数据。这可以是任何数据类型，通event.currentTarget.data 来获取。</span><br><span class="line">  - dir：显示通知的方向。 它默认为 auto，它只采用浏览器的语言设置行为，但你可以通过设置 ltr 和 rtl 的值来覆盖该行为（尽管大多数浏览器似乎忽略这些设置。）</span><br><span class="line">  - icon：USVString，包含要在通知中显示的图标的URL。</span><br><span class="line">  - lang：指定通知中使用的 lang。此字符串必须是有效的 BCP 47 语言标记。</span><br><span class="line">  - renotify：Boolean，指定在新通知替换旧通知后是否应通知用户。 默认值为false，表示不会通知他们。</span><br><span class="line">  - requirInteraction：表示通知应保持活动状态，直到用户单击或关闭它，而不是自动关闭。 默认值为 false。必须带 tag 才有效果。</span><br><span class="line">  - silent：无论设备设置如何，都应该发出一个布尔值，指定通知是否应该是静音，即不应发出声音或振动。 默认值为 false，这意味着它不会是静默的。</span><br><span class="line">  - tag：给定通知的 ID，允许您在必要时使用脚本查找，替换或删除通知。</span><br><span class="line">  - timestamp：DOMTimeStamp 表示创建通知的时间。 它可用于指示通知实际的时间。 例如，这可能是在过去，当通知用于因设备离线而无法立即传递的消息时，或将来用于即将开始的会议时间。</span><br><span class="line">  - vibrate：与通知显示一起运行的振动模式。 振动模式可以是具有少至一个成员的阵列。 值是以毫秒为单位的时间，其中偶数索引（0,2,4等）表示振动多长时间，奇数索引表示暂停多长时间。 例如，[300,100,400] 将振动 300ms，暂停 100ms，然后振动 400ms。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>普通通知</li>
+</ul>
+<div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <div>
+    <img src="/img/pwa/3.2.png" alt="图3.2" />
+    <div>图3.2</div>
+  </div>
+</div>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//见图3.2</span></span><br><span class="line"><span class="title class_">Notification</span>.<span class="title function_">requestPermission</span>().<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> n = <span class="keyword">new</span> <span class="title class_">Notification</span>(<span class="string">&#x27;消息提醒&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">body</span>: <span class="string">&#x27;这是一条普通消息&#x27;</span>,</span><br><span class="line">    <span class="attr">icon</span>: <span class="string">&#x27;/images/favicon.png&#x27;</span>,</span><br><span class="line">    <span class="attr">requireInteraction</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">data</span>: <span class="string">&#x27;https://baidu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">timestamp</span>: <span class="title class_">Date</span>.<span class="title function_">now</span>(),</span><br><span class="line">    <span class="comment">// vibrate: [300,100,400],//振动 300ms，暂停 100ms，然后振动 400ms</span></span><br><span class="line">  &#125;);</span><br><span class="line">      </span><br><span class="line">  n.<span class="property">onclick</span> = <span class="function"><span class="params">event</span> =&gt;</span> &#123;</span><br><span class="line">    n.<span class="title function_">close</span>();</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">const</span> currentTarget = event.<span class="property">currentTarget</span> <span class="keyword">as</span> <span class="built_in">any</span>;</span><br><span class="line">    <span class="keyword">if</span>(currentTarget.<span class="property">data</span>) &#123;</span><br><span class="line">      <span class="variable language_">window</span>.<span class="title function_">open</span>(currentTarget.<span class="property">data</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;).<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;通知权限已禁止，请设置打开权限&#x27;</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>交互通知</li>
+</ul>
+<div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <div>
+    <img src="/img/pwa/3.3.png" alt="图3.3" />
+    <div>图3.3</div>
+  </div>
+</div>
+
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//见图3.3</span></span><br><span class="line">navigator.<span class="property">serviceWorker</span>.<span class="property">ready</span>.<span class="title function_">then</span>(<span class="function"><span class="params">swReg</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="title class_">Notification</span>.<span class="title function_">requestPermission</span>().<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    swReg.<span class="title function_">showNotification</span>(<span class="string">&#x27;你好&#x27;</span>, &#123;</span><br><span class="line">      <span class="attr">body</span>: <span class="string">&#x27;你想要钱吗?&#x27;</span>,</span><br><span class="line">      <span class="attr">icon</span>: <span class="string">&#x27;/images/favicon.png&#x27;</span>,</span><br><span class="line">      <span class="attr">requireInteraction</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">actions</span>: [&#123;</span><br><span class="line">        <span class="attr">action</span>: <span class="string">&#x27;yes&#x27;</span>,</span><br><span class="line">        <span class="attr">title</span>: <span class="string">&#x27;想&#x27;</span>,</span><br><span class="line">      &#125;, &#123;</span><br><span class="line">        <span class="attr">action</span>: <span class="string">&#x27;no&#x27;</span>,</span><br><span class="line">        <span class="attr">title</span>: <span class="string">&#x27;不想&#x27;</span></span><br><span class="line">      &#125;]</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;).<span class="title function_">catch</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;通知权限已禁止，请设置打开权限&#x27;</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)  </span><br></pre></td></tr></table></figure>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//sw.js 监听notification</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&quot;notificationclick&quot;</span>, <span class="keyword">function</span> (<span class="params">event</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;notificationclick&quot;</span>, event);</span><br><span class="line">  event.<span class="property">notification</span>.<span class="title function_">close</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (event.<span class="property">action</span> == <span class="string">&quot;yes&quot;</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;yes&quot;</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (event.<span class="property">action</span> == <span class="string">&quot;no&quot;</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;no&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="HC">HC</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://hhw19970223.github.io/2024/03/04/PWA/">https://hhw19970223.github.io/2024/03/04/PWA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hhw19970223.github.io" target="_blank">HC</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/webApp/">webApp</a><a class="post-meta__tags" href="/tags/PWA/">PWA</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/H_512.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HC</div><div class="author-info__description">打工仔的日常</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hhw19970223"><i></i><span>我们的官网</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hhw19970223" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">暂无公告</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PWA-%E6%B5%8B%E8%AF%95-demo"><span class="toc-number">1.</span> <span class="toc-text">PWA 测试 demo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web-app-%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">web app 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Service-Worker"><span class="toc-number">1.2.</span> <span class="toc-text">Service Worker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%9A%84%E6%A1%8C%E9%9D%A2%E9%80%9A%E7%9F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">用户的桌面通知</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/04/PWA/" title="PWA">PWA</a><time datetime="2024-03-04T10:23:07.000Z" title="发表于 2024-03-04 18:23:07">2024-03-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 - 2024 By HC</div><div class="footer_custom_text">欢迎来到我的博客</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initValine = () => {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'qGc5VeTbUTLdDHMSArf8drbK-gzGzoHsz',
+      appKey: 'ExpMowlO3lQNFlO14SSwt2B0',
+      avatar: 'monsterid',
+      serverURLs: 'https://qgc5vetb.lc-cn-n1-shared.com',
+      emojiMaps: {"smile":"e3/2018new_weixioa02_org.png","lovely":"09/2018new_keai_org.png","happy":"1e/2018new_taikaixin_org.png","clap":"6e/2018new_guzhang_thumb.png","whee":"33/2018new_xixi_thumb.png","haha":"8f/2018new_haha_thumb.png","laugh and cry":"4a/2018new_xiaoku_thumb.png","wink":"43/2018new_jiyan_org.png","greddy":"fa/2018new_chanzui_org.png","awkward":"a3/2018new_heixian_thumb.png","sweat":"28/2018new_han_org.png","pick nose":"9a/2018new_wabi_thumb.png","hum":"7c/2018new_heng_thumb.png","angry":"f6/2018new_nu_thumb.png","grievance":"a5/2018new_weiqu_thumb.png","poor":"96/2018new_kelian_org.png","disappoint":"aa/2018new_shiwang_thumb.png","sad":"ee/2018new_beishang_org.png","tear":"6e/2018new_leimu_org.png","no way":"83/2018new_kuxiao_org.png","shy":"c1/2018new_haixiu_org.png","dirt":"10/2018new_wu_thumb.png","love you":"f6/2018new_aini_org.png","kiss":"2c/2018new_qinqin_thumb.png","amorousness":"9d/2018new_huaxin_org.png","longing":"c9/2018new_chongjing_org.png","desire":"3e/2018new_tianping_thumb.png","bad laugh":"4d/2018new_huaixiao_org.png","blackness":"9e/2018new_yinxian_org.png","laugh without word":"2d/2018new_xiaoerbuyu_org.png","titter":"71/2018new_touxiao_org.png","cool":"c4/2018new_ku_org.png","not easy":"aa/2018new_bingbujiandan_thumb.png","think":"30/2018new_sikao_org.png","question":"b8/2018new_ningwen_org.png","no idea":"2a/2018new_wenhao_thumb.png","dizzy":"07/2018new_yun_thumb.png","bomb":"a2/2018new_shuai_thumb.png","bone":"a1/2018new_kulou_thumb.png","be quiet":"b0/2018new_xu_org.png","shut up":"62/2018new_bizui_org.png","stupid":"dd/2018new_shayan_org.png","surprise ":"49/2018new_chijing_org.png","vomit":"08/2018new_tu_org.png","cold":"40/2018new_kouzhao_thumb.png","sick":"3b/2018new_shengbing_thumb.png","bye":"fd/2018new_baibai_thumb.png","look down on":"da/2018new_bishi_org.png","white eye":"ef/2018new_landelini_org.png","left hum":"43/2018new_zuohengheng_thumb.png","right hum":"c1/2018new_youhengheng_thumb.png","crazy":"17/2018new_zhuakuang_org.png","scold ":"87/2018new_zhouma_thumb.png","hit on face":"cb/2018new_dalian_org.png","wow":"ae/2018new_ding_org.png","fan":"86/2018new_hufen02_org.png","money":"a2/2018new_qian_thumb.png","yawn":"55/2018new_dahaqian_org.png","sleepy":"3c/2018new_kun_thumb.png","sleep":"e2/2018new_shuijiao_thumb.png","watermelon ":"01/2018new_chigua_thumb.png","doge":"a1/2018new_doge02_org.png","dog":"22/2018new_erha_org.png","cat":"7b/2018new_miaomiao_thumb.png","thumb":"e6/2018new_zan_org.png","good":"8a/2018new_good_org.png","ok":"45/2018new_ok_org.png","yeah":"29/2018new_ye_thumb.png","shack hand":"e9/2018new_woshou_thumb.png","bow":"e7/2018new_zuoyi_org.png","come":"42/2018new_guolai_thumb.png","punch":"86/2018new_quantou_thumb.png"},
+      path: window.location.pathname,
+      visitor: true
+    }, {"emojiCDN":"https://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/","placeholder":"请输入评论","meta":["nick","mail"],"pageSize":10}))
+  }
+
+  const loadValine = async () => {
+    if (typeof Valine === 'function') initValine()
+    else {
+      await getScript('https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/Valine.min.js')
+      initValine()
+    }
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
