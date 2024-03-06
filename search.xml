@@ -162,4 +162,51 @@
         <tag>node</tag>
       </tags>
   </entry>
+  <entry>
+    <title>GO环境搭建(一)</title>
+    <url>/2024/03/06/go/GO%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(%E4%B8%80)/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr>
+<h3 id="安装地址-GO官网下载地址"><a href="#安装地址-GO官网下载地址" class="headerlink" title="安装地址 GO官网下载地址"></a>安装地址 <a href="https://golang.org/dl/">GO官网下载地址</a></h3><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><ul>
+<li>将安装好的go根目录下的bin目录加入环境变量</li>
+</ul>
+<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><ul>
+<li>将安装包解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf go1.22.1.linux-amd64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>建立GO的工作空间(包含 src存放源码文件， pkg编译后包的目标文件， bin生成可执行文件)</p>
+</li>
+<li><p>添加PATH环境变量并且设置GOPATH环境变量</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export GOROOT= ##Golang安装目录</span><br><span class="line">export PATH=$GOROOT/bin:$PATH</span><br><span class="line">export GOPATH= ##Golang项目目录</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>刷新环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证一下是否安装成功"><a href="#验证一下是否安装成功" class="headerlink" title="验证一下是否安装成功"></a>验证一下是否安装成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go version </span><br></pre></td></tr></table></figure>
+
+<h1 id="vs-code"><a href="#vs-code" class="headerlink" title="vs code"></a>vs code</h1><hr>
+<h3 id="GO插件安装"><a href="#GO插件安装" class="headerlink" title="GO插件安装"></a>GO插件安装</h3><div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <img src="/img/go/1.2.1.png" />
+</div>
+
+<h3 id="安装Go语言开发工具包"><a href="#安装Go语言开发工具包" class="headerlink" title="安装Go语言开发工具包"></a>安装Go语言开发工具包</h3><ul>
+<li>按下Ctrl+Shift+P, 输入<mark class="hl-label orange">go:install</mark> , 选择Go:Install&#x2F;Update Tools, 选中并会回车执行该命令</li>
+</ul>
+<div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <img src="/img/go/1.2.2.png" />
+</div>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>GO</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
 </search>
