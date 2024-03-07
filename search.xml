@@ -163,6 +163,159 @@
       </tags>
   </entry>
   <entry>
+    <title>Air命令行工具</title>
+    <url>/2024/03/07/go/Air%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="简介-git地址"><a href="#简介-git地址" class="headerlink" title="简介 git地址"></a>简介 <a href="https://github.com/cosmtrek/air/blob/master/README-zh_cn.md">git地址</a></h3><div class="note info no-icon flat"><p>Gin 插件 Air 是一个用于 Gin Web 框架的开发工具，它提供了热重载（Hot Reload）功能，能够在你修改代码后自动重新编译和启动应用，从而加速开发过程。</p>
+</div>
+
+<h3 id="特色"><a href="#特色" class="headerlink" title="特色"></a>特色</h3><ul>
+<li>彩色的日志输出</li>
+<li>自定义构建或必要的命令</li>
+<li>支持外部子目录</li>
+<li>在 Air 启动之后，允许监听新创建的路径</li>
+<li>更棒的构建过程</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">go install github.com/cosmtrek/air@latest</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看安装版本是否安装成功</span></span><br><span class="line">air -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">初始化</span></span><br><span class="line">air init </span><br></pre></td></tr></table></figure>
+
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">air </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">传递参数bench</span></span><br><span class="line">air bench</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">能打印所有日志</span></span><br><span class="line">air -d</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>GO</tag>
+        <tag>Gin</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GO命令(二)</title>
+    <url>/2024/03/06/go/GO%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>env</td>
+<td>用于打印 GO 语言的环境信息</td>
+</tr>
+<tr>
+<td>mod init</td>
+<td>初始化 GO 模块</td>
+</tr>
+<tr>
+<td>mod tidy</td>
+<td>整理 GO 模块依赖，删除不需要的依赖</td>
+</tr>
+<tr>
+<td>run</td>
+<td>编译并运行 GO 程序，无需生成可执行文件</td>
+</tr>
+<tr>
+<td>build</td>
+<td>用于编译我们指定的源码文件或代码包以及它们的依赖包</td>
+</tr>
+<tr>
+<td>get</td>
+<td>可以根据要求和实际情况从互联网上下载或更新指定的代码包及其依赖包，并对它们进行编译和安装</td>
+</tr>
+<tr>
+<td>install</td>
+<td>编译并安装指定的代码包及它们的依赖包</td>
+</tr>
+<tr>
+<td>clean</td>
+<td>删除掉执行其它命令时产生的一些文件和目录</td>
+</tr>
+<tr>
+<td>doc</td>
+<td>打印附于 GO 语言程序实体上的文档</td>
+</tr>
+<tr>
+<td>test</td>
+<td>运行 GO 程序中的测试代码</td>
+</tr>
+<tr>
+<td>fmt</td>
+<td>格式化当前目录下的所有 GO 源文件</td>
+</tr>
+<tr>
+<td>list</td>
+<td>列出指定的代码包的信息</td>
+</tr>
+<tr>
+<td>fix</td>
+<td>把指定代码包的所有 GO 语言源码文件中的旧版本代码修正为新版本的代码</td>
+</tr>
+<tr>
+<td>vet</td>
+<td>检查 GO 语言源码中静态错误的简单工具</td>
+</tr>
+</tbody></table>
+<ul>
+<li>go install 和 go get 的区别</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>install</td>
+<td>在操作系统中安装 GO 生态的第三方命令行应用。不更改项目 go.mod 文件。侧重可执行文件的编译和安装。</td>
+</tr>
+<tr>
+<td>get</td>
+<td>对项目添加，更新，删除 go.mod 文件的依赖项(仅源码)。不执行编译。侧重应用依赖项管理</td>
+</tr>
+</tbody></table>
+<ul>
+<li>go get [-d] [-t] [-u] [build flags] [packages]</li>
+</ul>
+<div class="note warning no-icon flat"><p>从 GO 1.17 开始，go get不推荐使用安装可执行文件。 go install可以用它来代替。<br>在 GO 1.18 中，go get将不再构建包；它仅用于添加、更新或删除go.mod. 具体来说， go get将始终表现为该-d标志已启用。</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-t</td>
+<td>让命令程序同时下载并安装指定的代码包中的测试源码文件中依赖的代码包。</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>让命令程序只执行下载动作，而不执行安装动作。</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>让命令利用网络来更新已有代码包及其依赖包。默认情况下，该命令只会从网络上下载本地不存在的代码包，而不会更新已有的代包。</td>
+</tr>
+</tbody></table>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级特定模块</span></span><br><span class="line">go get golang.org/x/net</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级模块，提供主模块中的包导入的包</span></span><br><span class="line">go get -u ./...</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级或降级到模块的特定版本</span></span><br><span class="line">go get golang.org/x/text@v0.3.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新到模块的 master 分支上的提交</span></span><br><span class="line">go get golang.org/x/text@master</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除对模块的依赖并降级需要它的模块</span></span><br><span class="line">go get golang.org/x/text@none</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级主模块所需的最低GO版本</span></span><br><span class="line">go get go</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级建议的GO工具链，独立于最低GO版本</span></span><br><span class="line">go get toolchain</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级到建议的 Go 工具链的最新补丁版本</span></span><br><span class="line">go get toolchain@patch</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>go install [build flags] [packages]</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装最新版本的程序,</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">忽略当前目录中的 go.mod</span></span><br><span class="line">go install golang.org/x/tools/gopls@latest</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装特定版本的程序</span></span><br><span class="line">go install golang.org/x/tools/gopls@v0.6.4</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在当前目录中安装模块选择的版本的程序</span></span><br><span class="line">go install golang.org/x/tools/gopls</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将所有程序安装在一个目录中</span></span><br><span class="line">go install ./cmd/...</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>GO</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GO环境搭建(一)</title>
     <url>/2024/03/06/go/GO%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(%E4%B8%80)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr>
@@ -206,6 +359,32 @@
       </categories>
       <tags>
         <tag>GO</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Gin框架(五)</title>
+    <url>/2024/03/06/go/Gin%E6%A1%86%E6%9E%B6(%E4%BA%94)/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><div class="note info no-icon flat"><p>Gin 是一个用 Go 语言编写的 Web 框架，旨在提供简洁、快速的开发体验。它以其高性能和低内存占用而闻名，适用于构建各种规模的 Web 应用程序和 API 服务。</p>
+</div>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">go get -u github.com/gin-gonic/gin</span><br></pre></td></tr></table></figure>
+
+<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">&quot;net/http&quot;</span></span><br><span class="line">  <span class="string">&quot;strings&quot;</span></span><br><span class="line">  <span class="string">&quot;github.com/gin-gonic/gin&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123;</span><br><span class="line">  HHH  <span class="type">int</span>       <span class="string">`form:&quot;hhh&quot; binding:&quot;required,gt=10&quot;`</span></span><br><span class="line">  WWW  <span class="type">string</span>    <span class="string">`form:&quot;www&quot; binding:&quot;required&quot;`</span></span><br><span class="line">  time time.Time <span class="string">`form:&quot;birthday&quot; time_format:&quot;2006-01-02&quot; time_utc:&quot;1&quot;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="comment">// 创建路由</span></span><br><span class="line">  r := gin.Default()</span><br><span class="line">  <span class="comment">// 绑定路由规则，执行的函数 gin.Context，封装了request和response</span></span><br><span class="line">  <span class="comment">///user/ooo?www=123</span></span><br><span class="line">  r.GET(<span class="string">&quot;/user/:name/*action&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    name := c.Param(<span class="string">&quot;name&quot;</span>)</span><br><span class="line">    action := c.Param(<span class="string">&quot;action&quot;</span>)</span><br><span class="line">    www := c.Query(<span class="string">&quot;www&quot;</span>)		</span><br><span class="line">    hhh := c.DefaultQuery(<span class="string">&quot;hhh&quot;</span>, <span class="string">&quot;hello&quot;</span>)<span class="comment">//hhh不存在时默认是hello</span></span><br><span class="line">    <span class="comment">//截取/</span></span><br><span class="line">    action = strings.Trim(action, <span class="string">&quot;/&quot;</span>)</span><br><span class="line">    c.String(http.StatusOK, name+<span class="string">&quot; is &quot;</span>+action + <span class="string">&quot;.&quot;</span> + www + hhh)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  r.GET(<span class="string">&quot;/person&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    <span class="keyword">var</span> person Person</span><br><span class="line">    <span class="keyword">if</span> err := c.ShouldBind(&amp;person); err != <span class="literal">nil</span> &#123;</span><br><span class="line">      c.String(<span class="number">500</span>, fmt.Sprint(err))</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    c.String(<span class="number">200</span>, fmt.Sprintf(<span class="string">&quot;%#v&quot;</span>, person))</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">//表单form提交 enctype=&quot;application/x-www-form-urlencoded&quot;</span></span><br><span class="line">  r.POST(<span class="string">&quot;/form&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    types := c.DefaultPostForm(<span class="string">&quot;type&quot;</span>, <span class="string">&quot;post&quot;</span>)</span><br><span class="line">    username := c.PostForm(<span class="string">&quot;username&quot;</span>)</span><br><span class="line">    password := c.PostForm(<span class="string">&quot;userpassword&quot;</span>)</span><br><span class="line">    c.String(http.StatusOK, fmt.Sprintf(<span class="string">&quot;username:%s,password:%s,type:%s&quot;</span>, username, password, types))</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">//表单上传文件 enctype=&quot;multipart/form-data&quot;</span></span><br><span class="line">  r.MaxMultipartMemory = <span class="number">8</span> &lt;&lt; <span class="number">20</span></span><br><span class="line">  r.POST(<span class="string">&quot;/upload&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    <span class="comment">//file, err := c.FormFile(&quot;file&quot;)单个</span></span><br><span class="line">    form, err := c.MultipartForm()<span class="comment">//多个</span></span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">      c.String(http.StatusBadRequest, fmt.Sprintf(<span class="string">&quot;get err %s&quot;</span>, err.Error()))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 获取所有图片</span></span><br><span class="line">    files := form.File[<span class="string">&quot;files&quot;</span>]</span><br><span class="line">    <span class="comment">// 遍历所有图片</span></span><br><span class="line">    <span class="keyword">for</span> _, file := <span class="keyword">range</span> files &#123;</span><br><span class="line">      <span class="comment">// 指定目标路径</span></span><br><span class="line">      dst := <span class="string">&quot;uploads/&quot;</span> + file.Filename</span><br><span class="line">      <span class="keyword">if</span> err := c.SaveUploadedFile(file, dst); err != <span class="literal">nil</span> &#123;</span><br><span class="line">        c.String(http.StatusBadRequest, fmt.Sprintf(<span class="string">&quot;upload err %s&quot;</span>, err.Error()))</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    c.String(<span class="number">200</span>, fmt.Sprintf(<span class="string">&quot;upload ok %d files&quot;</span>, <span class="built_in">len</span>(files)))</span><br><span class="line">  &#125;)</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 监听端口，默认在8080</span></span><br><span class="line">  r.Run(<span class="string">&quot;:8080&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="路由组"><a href="#路由组" class="headerlink" title="路由组"></a>路由组</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">r := gin.Default()</span><br><span class="line">v1 := r.Group(<span class="string">&quot;/v1&quot;</span>)</span><br><span class="line"><span class="comment">// &#123;&#125; 是书写规范</span></span><br><span class="line">&#123;</span><br><span class="line">  v1.GET(<span class="string">&quot;/login&quot;</span>, xxx)</span><br><span class="line">  v1.GET(<span class="string">&quot;submit&quot;</span>, xxx)</span><br><span class="line">&#125;</span><br><span class="line">  v2 := r.Group(<span class="string">&quot;/v2&quot;</span>)</span><br><span class="line">&#123;</span><br><span class="line">  v2.GET(<span class="string">&quot;/login&quot;</span>, xxx)</span><br><span class="line">  v2.GET(<span class="string">&quot;/submit&quot;</span>, xxx)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">r.Use(MiddleWare())</span><br><span class="line"><span class="comment">//局部中间件</span></span><br><span class="line">r.GET(<span class="string">&quot;/ce&quot;</span>, MiddleWare(), <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义中间</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">MiddleWare</span><span class="params">()</span></span> gin.HandlerFunc &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">r.GET(<span class="string">&quot;cookie&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">  <span class="comment">// 获取客户端是否携带cookie</span></span><br><span class="line">  cookie, err := c.Cookie(<span class="string">&quot;hhh&quot;</span>)</span><br><span class="line">  <span class="comment">// 给客户端设置cookie</span></span><br><span class="line">  <span class="comment">// maxAge int, 单位为秒</span></span><br><span class="line">  <span class="comment">// path,cookie所在目录</span></span><br><span class="line">  <span class="comment">// domain string,域名</span></span><br><span class="line">  <span class="comment">// secure 是否智能通过https访问</span></span><br><span class="line">  <span class="comment">// httpOnly bool  是否允许别人通过js获取自己的cookie</span></span><br><span class="line">  c.SetCookie(<span class="string">&quot;hhh&quot;</span>, <span class="string">&quot;www&quot;</span>, <span class="number">60</span>, <span class="string">&quot;/&quot;</span>,<span class="string">&quot;localhost&quot;</span>, <span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">  &#125;        </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="session"><a href="#session" class="headerlink" title="session"></a>session</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">&quot;fmt&quot;</span></span><br><span class="line">  <span class="string">&quot;github.com/gorilla/sessions&quot;</span></span><br><span class="line">  <span class="string">&quot;github.com/gin-gonic/gin&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  store := sessions.NewCookieStore([]<span class="type">byte</span>(<span class="string">&quot;密匙&quot;</span>))</span><br><span class="line"></span><br><span class="line">  r := gin.Default()</span><br><span class="line">  r.GET(<span class="string">&quot;save&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    session, err := store.Get(c.Request, <span class="string">&quot;session-name&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">      c.String(<span class="number">203</span>, <span class="string">&quot;Failed saving session: &quot;</span> + err.Error())</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置存活时间</span></span><br><span class="line">    session.Options.MaxAge = <span class="number">20</span></span><br><span class="line">    <span class="comment">// 在session中存储值</span></span><br><span class="line">    session.Values[<span class="string">&quot;hhh&quot;</span>] = <span class="string">&quot;www&quot;</span></span><br><span class="line">    <span class="comment">// 保存更改</span></span><br><span class="line">    session.Save(c.Request, c.Writer)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  r.GET(<span class="string">&quot;get&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    session, err := store.Get(c.Request, <span class="string">&quot;session-name&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">      c.String(<span class="number">203</span>, <span class="string">&quot;Failed saving session: &quot;</span> + err.Error())</span><br><span class="line">      <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    foo := session.Values[<span class="string">&quot;hhh&quot;</span>]</span><br><span class="line">    fmt.Println(foo)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  r.GET(<span class="string">&quot;del&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">    session, _ := store.Get(c.Request, <span class="string">&quot;session-name&quot;</span>)</span><br><span class="line">    session.Options.MaxAge = <span class="number">-1</span><span class="comment">//删除session</span></span><br><span class="line">    session.Save(c.Request, c.Writer)</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  r.Run(<span class="string">&quot;:8080&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>GO</tag>
+        <tag>Gin</tag>
         <tag>学习笔记</tag>
       </tags>
   </entry>
