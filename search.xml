@@ -163,8 +163,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Air命令行工具</title>
-    <url>/2024/03/07/go/Air%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/</url>
+    <title>Air命令行工具(七)</title>
+    <url>/2024/03/07/go/Air%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7(%E4%B8%83)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="简介-git地址"><a href="#简介-git地址" class="headerlink" title="简介 git地址"></a>简介 <a href="https://github.com/cosmtrek/air/blob/master/README-zh_cn.md">git地址</a></h3><div class="note info no-icon flat"><p>Gin 插件 Air 是一个用于 Gin Web 框架的开发工具，它提供了热重载（Hot Reload）功能，能够在你修改代码后自动重新编译和启动应用，从而加速开发过程。</p>
 </div>
 
@@ -190,6 +190,53 @@
       </tags>
   </entry>
   <entry>
+    <title>GO环境搭建(一)</title>
+    <url>/2024/03/06/go/GO%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(%E4%B8%80)/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr>
+<h3 id="安装地址-GO官网下载地址"><a href="#安装地址-GO官网下载地址" class="headerlink" title="安装地址 GO官网下载地址"></a>安装地址 <a href="https://golang.org/dl/">GO官网下载地址</a></h3><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><ul>
+<li>将安装好的go根目录下的bin目录加入环境变量</li>
+</ul>
+<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><ul>
+<li>将安装包解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf go1.22.1.linux-amd64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>建立GO的工作空间(包含 src存放源码文件， pkg编译后包的目标文件， bin生成可执行文件)</p>
+</li>
+<li><p>添加PATH环境变量并且设置GOPATH环境变量</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export GOROOT= ##Golang安装目录</span><br><span class="line">export PATH=$GOROOT/bin:$PATH</span><br><span class="line">export GOPATH= ##Golang项目目录</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>刷新环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证一下是否安装成功"><a href="#验证一下是否安装成功" class="headerlink" title="验证一下是否安装成功"></a>验证一下是否安装成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go version </span><br></pre></td></tr></table></figure>
+
+<h1 id="vs-code"><a href="#vs-code" class="headerlink" title="vs code"></a>vs code</h1><hr>
+<h3 id="GO插件安装"><a href="#GO插件安装" class="headerlink" title="GO插件安装"></a>GO插件安装</h3><div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <img src="/img/go/1.2.1.png" />
+</div>
+
+<h3 id="安装Go语言开发工具包"><a href="#安装Go语言开发工具包" class="headerlink" title="安装Go语言开发工具包"></a>安装Go语言开发工具包</h3><ul>
+<li>按下Ctrl+Shift+P, 输入<mark class="hl-label orange">go:install</mark> , 选择Go:Install&#x2F;Update Tools, 选中并会回车执行该命令</li>
+</ul>
+<div style="display: flex; text-align: center; margin-bottom: 25px;">
+  <img src="/img/go/1.2.2.png" />
+</div>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>GO</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GO命令(二)</title>
     <url>/2024/03/06/go/GO%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><table>
@@ -210,6 +257,10 @@
 <tr>
 <td>mod tidy</td>
 <td>整理 GO 模块依赖，删除不需要的依赖</td>
+</tr>
+<tr>
+<td>mod download</td>
+<td>go.mod文件修改包的版本号</td>
 </tr>
 <tr>
 <td>run</td>
@@ -290,15 +341,19 @@
 </thead>
 <tbody><tr>
 <td>-t</td>
-<td>让命令程序同时下载并安装指定的代码包中的测试源码文件中依赖的代码包。</td>
+<td>同时下载并安装指定的代码包中的测试源码文件中依赖的代码包。</td>
 </tr>
 <tr>
 <td>-d</td>
-<td>让命令程序只执行下载动作，而不执行安装动作。</td>
+<td>只执行下载动作，而不执行安装动作。</td>
 </tr>
 <tr>
 <td>-u</td>
-<td>让命令利用网络来更新已有代码包及其依赖包。默认情况下，该命令只会从网络上下载本地不存在的代码包，而不会更新已有的代包。</td>
+<td>将会升级到最新的次要版本或者修订版本</td>
+</tr>
+<tr>
+<td>-u&#x3D;patch</td>
+<td>将会升级到最新的修订版本</td>
 </tr>
 </tbody></table>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级特定模块</span></span><br><span class="line">go get golang.org/x/net</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级模块，提供主模块中的包导入的包</span></span><br><span class="line">go get -u ./...</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级或降级到模块的特定版本</span></span><br><span class="line">go get golang.org/x/text@v0.3.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新到模块的 master 分支上的提交</span></span><br><span class="line">go get golang.org/x/text@master</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除对模块的依赖并降级需要它的模块</span></span><br><span class="line">go get golang.org/x/text@none</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级主模块所需的最低GO版本</span></span><br><span class="line">go get go</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级建议的GO工具链，独立于最低GO版本</span></span><br><span class="line">go get toolchain</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">升级到建议的 Go 工具链的最新补丁版本</span></span><br><span class="line">go get toolchain@patch</span><br></pre></td></tr></table></figure>
@@ -307,53 +362,6 @@
 <li>go install [build flags] [packages]</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装最新版本的程序,</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">忽略当前目录中的 go.mod</span></span><br><span class="line">go install golang.org/x/tools/gopls@latest</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装特定版本的程序</span></span><br><span class="line">go install golang.org/x/tools/gopls@v0.6.4</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在当前目录中安装模块选择的版本的程序</span></span><br><span class="line">go install golang.org/x/tools/gopls</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将所有程序安装在一个目录中</span></span><br><span class="line">go install ./cmd/...</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>GO</tag>
-        <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GO环境搭建(一)</title>
-    <url>/2024/03/06/go/GO%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA(%E4%B8%80)/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><hr>
-<h3 id="安装地址-GO官网下载地址"><a href="#安装地址-GO官网下载地址" class="headerlink" title="安装地址 GO官网下载地址"></a>安装地址 <a href="https://golang.org/dl/">GO官网下载地址</a></h3><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><ul>
-<li>将安装好的go根目录下的bin目录加入环境变量</li>
-</ul>
-<h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><ul>
-<li>将安装包解压</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf go1.22.1.linux-amd64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>建立GO的工作空间(包含 src存放源码文件， pkg编译后包的目标文件， bin生成可执行文件)</p>
-</li>
-<li><p>添加PATH环境变量并且设置GOPATH环境变量</p>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export GOROOT= ##Golang安装目录</span><br><span class="line">export PATH=$GOROOT/bin:$PATH</span><br><span class="line">export GOPATH= ##Golang项目目录</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>刷新环境变量</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-
-<h3 id="验证一下是否安装成功"><a href="#验证一下是否安装成功" class="headerlink" title="验证一下是否安装成功"></a>验证一下是否安装成功</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go version </span><br></pre></td></tr></table></figure>
-
-<h1 id="vs-code"><a href="#vs-code" class="headerlink" title="vs code"></a>vs code</h1><hr>
-<h3 id="GO插件安装"><a href="#GO插件安装" class="headerlink" title="GO插件安装"></a>GO插件安装</h3><div style="display: flex; text-align: center; margin-bottom: 25px;">
-  <img src="/img/go/1.2.1.png" />
-</div>
-
-<h3 id="安装Go语言开发工具包"><a href="#安装Go语言开发工具包" class="headerlink" title="安装Go语言开发工具包"></a>安装Go语言开发工具包</h3><ul>
-<li>按下Ctrl+Shift+P, 输入<mark class="hl-label orange">go:install</mark> , 选择Go:Install&#x2F;Update Tools, 选中并会回车执行该命令</li>
-</ul>
-<div style="display: flex; text-align: center; margin-bottom: 25px;">
-  <img src="/img/go/1.2.2.png" />
-</div>
-]]></content>
       <categories>
         <category>后端</category>
       </categories>
@@ -385,6 +393,71 @@
       <tags>
         <tag>GO</tag>
         <tag>Gin</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GO简单用法(三)</title>
+    <url>/2024/03/06/go/GO%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95(%E4%B8%89)/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">&quot;io&quot;</span></span><br><span class="line">  <span class="string">&quot;os&quot;</span></span><br><span class="line">  <span class="string">&quot;github.com/gin-gonic/gin&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  gin.DisableConsoleColor()</span><br><span class="line">  f, _ := os.Create(<span class="string">&quot;gin.log&quot;</span>) <span class="comment">//日志将记录在./gin.log文件中</span></span><br><span class="line">  gin.DefaultWriter = io.MultiWriter(f) <span class="comment">//(f, os.Stdout)同时将日志写入文件和控制台</span></span><br><span class="line">  r := gin.Default()</span><br><span class="line">  r.GET(<span class="string">&quot;/hhh&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123;&#125;)</span><br><span class="line">  r.Run()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="相对路径包导入"><a href="#相对路径包导入" class="headerlink" title="相对路径包导入"></a>相对路径包导入</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">main.go</span><br><span class="line">conf</span><br><span class="line">  -- config.go</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>项目下go.mod: go mod init xxx</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">module xxx</span><br><span class="line">go 1.22.0</span><br><span class="line"></span><br><span class="line">require &quot;conf&quot; v0.0.1</span><br><span class="line">replace conf =&gt; ./conf</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>conf(目录下包名都必须叫conf)目录下go.mod: go mod init conf</p>
+</li>
+<li><p>main.go引入conf模块</p>
+</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">&quot;conf&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="载入配置文件"><a href="#载入配置文件" class="headerlink" title="载入配置文件"></a>载入配置文件</h3><ul>
+<li>conf&#x2F;config.go</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> conf</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Hhh <span class="keyword">struct</span> &#123;</span><br><span class="line">	Www <span class="string">`ini:&quot;www&quot;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Www <span class="keyword">struct</span> &#123;</span><br><span class="line">	HHH <span class="type">int</span> <span class="string">`ini:&quot;hhh&quot;`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>conf&#x2F;config.ini</li>
+</ul>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[www]</span></span><br><span class="line"><span class="attr">hhh</span>=<span class="number">1231</span></span><br><span class="line"></span><br><span class="line"><span class="section">[hhh]</span></span><br><span class="line"><span class="attr">hhh</span>=<span class="number">2341</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>main.go</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">  <span class="string">&quot;conf&quot;</span></span><br><span class="line">  <span class="string">&quot;fmt&quot;</span></span><br><span class="line">  <span class="string">&quot;gopkg.in/ini.v1&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">  cfg := <span class="built_in">new</span>(conf.Hhh)</span><br><span class="line">  err := ini.MapTo(cfg, <span class="string">&quot;./conf/config.ini&quot;</span>) </span><br><span class="line">  <span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">    fmt.Printf(<span class="string">&quot;load ini failed, err:%v\n&quot;</span>, err)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  fmt.Println(cfg.Www.HHH) <span class="comment">//1231</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><ul>
+<li>哈希算法： golang.org&#x2F;x&#x2F;crypto&#x2F;bcrypt</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">userPassword := <span class="string">&quot;123456&quot;</span></span><br><span class="line">passwordByte, err := bcrypt.GenerateFromPassword([]<span class="type">byte</span>(userPassword), bcrypt.DefaultCost) <span class="comment">//加密</span></span><br><span class="line"><span class="keyword">const</span> hashed := <span class="type">string</span>(passwordByte) <span class="comment">//$2a$10$HJQ2tI4XelxuGHOLDU3.vOOUSfszDmr0.Mf8bb.FQesEBuOhpRHPa</span></span><br><span class="line">err: = bcrypt.CompareHashAndPassword([]<span class="type">byte</span>(hashed), []<span class="type">byte</span>(userPassword)) <span class="comment">//校验密码</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>md5: encoding&#x2F;hex 和 crypto&#x2F;md5</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">str := <span class="string">&quot;123456789&quot;</span></span><br><span class="line"></span><br><span class="line">data := []<span class="type">byte</span>(str)</span><br><span class="line">md5Byte := md5.Sum(data) <span class="comment">//[16]byte [49 50 51 52 53 54 55 56 57]</span></span><br><span class="line">md5str := fmt.Sprintf(<span class="string">&quot;%x&quot;</span>, md5Byte) <span class="comment">//16进制 25f9e794323b453885f5181f1b624d0b</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>base64: encoding&#x2F;base64</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">str := <span class="string">&quot;123456789&quot;</span></span><br><span class="line">data := []<span class="type">byte</span>(str) <span class="comment">//[49 50 51 52 53 54 55 56 57]</span></span><br><span class="line">base64str := base64.StdEncoding.EncodeToString(input) <span class="comment">//MTIzNDU2Nzg5</span></span><br><span class="line">decodeBytes, err := base64.StdEncoding.DecodeString(base64str) <span class="comment">//[]byte</span></span><br><span class="line">fmt.Printf(<span class="string">&quot;decode base64 : %v&quot;</span>, <span class="type">string</span>(decodeBytes)) <span class="comment">//123456789</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 在url使用URLEncoding</span></span><br><span class="line">urlEncode := base64.URLEncoding.EncodeToString([]<span class="type">byte</span>(input)) <span class="comment">//MTIzNDU2Nzg5</span></span><br><span class="line">urlDecode, err := base64.URLEncoding.DecodeString(urlEncode)</span><br><span class="line">fmt.Printf(<span class="string">&quot;urlDecode : %v&quot;</span>, <span class="type">string</span>(urlDecode)) <span class="comment">//123456789</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>sha： encoding&#x2F;hex and (crypto&#x2F;sha256 or crypto&#x2F;sha512 or …)</li>
+</ul>
+<div class="note info no-icon flat"><p>SHA（Secure Hash Algorithm，安全散列算法）是一系列密码学哈希函数，用于计算数据的散列值。SHA 函数接受输入数据并生成固定长度的输出，通常称为哈希值或散列值。SHA 算法被广泛应用于安全领域，包括数据完整性验证、数字签名、消息认证码等。<br>SHA 算法系列包括多种不同的变种，比如 SHA-1、SHA-256、SHA-512 等。每个变种都具有不同的输出长度和安全性水平，但都遵循相似的设计原则和算法流程。</p>
+</div> 
+
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">str := <span class="string">&quot;123456789&quot;</span></span><br><span class="line">w := sha256.New()</span><br><span class="line">io.WriteString(w, str) </span><br><span class="line">bw := w.Sum(<span class="literal">nil</span>) <span class="comment">// [21 226 176 211 195 56 145 235 176 241 239 96 158 196 25 66 12 32 227 32 206 148 198 95 188 140 51 18 68 142 178 37]</span></span><br><span class="line">fmt.Printf(<span class="string">&quot;hash : %x\n&quot;</span>, bw) <span class="comment">//15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225</span></span><br><span class="line">shastr2 := hex.EncodeToString(bw) <span class="comment">//将 bw 转成字符串 //15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>GO</tag>
         <tag>学习笔记</tag>
       </tags>
   </entry>
